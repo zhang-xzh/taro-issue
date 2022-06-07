@@ -1,0 +1,103 @@
+/* miniprogram/pages/room/room.wxss */
+@import '../templates/showAuthToast/authToast.wxss';
+
+.page-room{
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+.room-mask {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  position: absolute;
+  z-index: 90;
+  background-color: white;
+}
+
+.room-mask .loading {
+  position: absolute;
+  top: 30vh;
+  left: 50vw;
+  transform: translate(-50%, 0);
+  width: 300rpx;
+  height: 250rpx;
+  border-radius: 12rpx;
+  background: rgba(0,0,0,0.6);
+  color: white;
+  padding: 40rpx;
+  display: flex;
+  flex-direction: column;
+}
+.room-mask .loading-img {
+  height: 200rpx;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  animation: rotate 2s linear infinite;
+}
+.room-mask .rotate-img {
+  width:160rpx;
+  height: 160rpx;
+}
+.room-mask .loading-text {
+  width: 100%;
+  padding-top: 40rpx;
+  text-align: center;
+}
+@keyframes rotate {
+  0%{ transform: rotate(0deg);}
+  50%{ transform: rotate(180deg);}
+  100%{ transform: rotate(360deg);}
+}
+
+.guide {
+  width: 80vw;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  left: 10vw;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+.guide .title {
+  width:100%;
+  text-align:center;
+  margin:10vh 0 5vh 0;
+  font-size:42rpx;
+}
+.guide .linking {
+  width:100%;
+  text-align:center;
+  margin:5vh 0 5vh 0;
+  font-size:36rpx;
+}
+
+.guidWrap {
+  width: 100%;
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.guidItem {
+  width: 100%;
+  height: 12vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.guidItem image {
+  width: 30vw;
+  height: 20vw;
+  max-height: 15vh;
+}
+
+.guidItem .guidCont {
+  width: 25vw;
+  font-size: 30rpx;
+}

@@ -1,0 +1,17 @@
+<import src="../templates/index/index.wxml"></import>
+<import src="../templates/failpage/failpage.wxml"></import>
+<import src="../templates/success/success.wxml"></import>
+<import src="../templates/showAuthToast/showAuthToast.wxml"></import>
+
+<view id="fix-full-page">
+  <!-- index -->
+  <template is="Index" wx:if="{{curPage === 1 && !(disableAuthPage === 'true')}}" data="{{...cmsConfig,index_rule,show_about_dlg,indexChecked,indexDisableBtn}}"></template>
+
+    <!-- fail page -->
+    <template is="FailPage" wx:if="{{curPage === 3}}" data="{{failInfo, BizToken, aaa}}"></template>
+    <!-- success page -->
+    <template is="SuccessPage" wx:if="{{curPage === 2}}" data="{{failInfo}}"></template>
+
+</view>
+
+<template is="auth_template"  data="{{...cmsConfig,authInfo}}" wx:if="{{show_auth_panel}}"></template>

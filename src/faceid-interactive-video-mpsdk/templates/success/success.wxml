@@ -1,0 +1,1 @@
+<template name="SuccessPage"><view class="trtcResultTop"><icon type="success" size="100"></icon></view><view class="trtcResultSuccess"><view>{{failInfo.ErrorMsg}}</view></view><view class="index-btn"><button bindtap="successGoToNext" hover-class="btn-hover">下一步</button></view></template>
